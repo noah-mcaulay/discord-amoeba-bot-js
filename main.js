@@ -8,7 +8,7 @@ const discord = require('discord.js');
 const client = new discord.Client();
 
 // store the filename of the audio file for sampling later
-const audioFile = fs.readSync("./data/sad-violin.mp3");
+const audioFile = fs.readFileSync("./data/sad-violin.mp3");
 
 client.on("ready", () => {
    console.log("I'm ready!");

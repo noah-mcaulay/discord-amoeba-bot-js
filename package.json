@@ -1,5 +1,5 @@
 {
-  "name": "discord-trump-bot",
+  "name": "discord-sad-violin-bot",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -12,7 +12,6 @@
     "discord.js": "^11.1.0",
     "ffmpeg-binaries": "^3.2.2-3",
     "moment": "^2.18.1",
-    "opusscript": "0.0.3",
-    "underscore": "^1.8.3"
+    "opusscript": "0.0.3"
   }
 }

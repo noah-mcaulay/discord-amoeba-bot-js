@@ -1,7 +1,6 @@
 const tokenFile = require("./token.js");
 
 const fs = require("fs");
-const _ = require("underscore");
 const moment = require("moment");
 const discord = require('discord.js');
 
@@ -9,6 +8,9 @@ const client = new discord.Client();
 
 // store the filename of the audio file for sampling later
 const audioFile = "./data/sad-violin.mp3";
+
+// audio stream options (volume)
+const audioOptions = { volume: 0.1 };
 
 client.on("ready", () => {
    console.log("I'm ready!");
@@ -20,7 +22,7 @@ client.on("message", message => {
    if (message.content === "ping") {
        message.channel.send("pong");
 
-   // if the sent message was "!sadviolin" then the audio
+   // if the sent message was "!sadviolin" then play the audio
    } else if (message.content === "!sadviolin") {
 
        // make sure the user is in a voice channel
@@ -31,7 +33,7 @@ client.on("message", message => {
                .then(connection => {
 
                    // play the audio file
-                   const dispatcher = connection.playFile(audioFile);
+                   const dispatcher = connection.playFile(audioFile, audioOptions);
 
                    // disconnect from the voice channel when the audio is over
                    dispatcher.on("end", () => {

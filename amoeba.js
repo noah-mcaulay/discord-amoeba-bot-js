@@ -10,7 +10,7 @@ const client = new discord.Client();
 const audioFile = "./data/bob-marley-everythings-gonna-be_alright.mp3";
 
 // audio stream options (volume)
-const audioOptions = { volume: 0.1 };
+const audioOptions = { volume: 0.3 };
 
 client.on("ready", () => {
    console.log("I'm ready!");

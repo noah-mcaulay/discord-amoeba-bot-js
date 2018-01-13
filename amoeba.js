@@ -39,6 +39,7 @@ client.on("message", message => {
                    // disconnect from the voice channel when the audio is over
                    dispatcher.on("end", () => {
                        message.member.voiceChannel.leave();
+                   });
                })
                .catch(console.log);
        } else if (message.content === "!sad") {

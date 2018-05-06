@@ -20,6 +20,10 @@ function playAudio(message, audioPath, audioOptions) {
             dispatcher.on("error", (error) => {
                console.log("Error playing audio: " + error);
             });
+
+            dispatcher.on("debug", (information) => {
+               console.log("Debug info: " + information);
+            });
         })
         .catch(console.log);
 }

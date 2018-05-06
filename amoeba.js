@@ -6,11 +6,11 @@ const discord = require('discord.js');
 
 const client = new discord.Client();
 
-const maps = require('./commands/maps.js');
-const ping = require('./commands/ping.js');
-const happy = require('./commands/happy.js');
-const sad = require('./commands/sad.js');
-const thot = require('./commands/thot.js');
+const maps = require('./commands/maps');
+const ping = require('./commands/ping');
+const happy = require('./commands/happy');
+const sad = require('./commands/sad');
+const thot = require('./commands/thot');
 
 const audioCommands = new Set([
     "!happy",

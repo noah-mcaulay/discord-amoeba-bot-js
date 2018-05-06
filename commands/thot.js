@@ -1,6 +1,6 @@
 'use strict';
 
-const audioManager = require('../utility/audioManager.js');
+const audioManager = require('../utility/audioManager');
 
 const thotAudio = "../data/begone-thot.mp3";
 const audioOptions = { volume: 0.3 };

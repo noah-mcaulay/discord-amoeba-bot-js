@@ -16,6 +16,10 @@ function playAudio(message, audioPath, audioOptions) {
                 console.log("Audio is over.");
                 message.member.voiceChannel.leave();
             });
+
+            dispatcher.on("error", (error) => {
+               console.log("Error playing audio: " + error);
+            });
         })
         .catch(console.log);
 }

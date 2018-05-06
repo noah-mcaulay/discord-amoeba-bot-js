@@ -9,7 +9,7 @@ function playAudio(message, audioPath, audioOptions) {
             // play the audio file
             const dispatcher = connection.playFile(audioPath, audioOptions);
 
-            console.log("Started playing audio!");
+            console.log("Started playing audio: " + audioPath);
 
             // disconnect from the voice channel when the audio is over
             dispatcher.on("end", () => {

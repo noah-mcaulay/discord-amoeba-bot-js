@@ -1,7 +1,5 @@
 const tokenFile = require("./token.js");
 
-const fs = require("fs");
-const moment = require("moment");
 const discord = require('discord.js');
 
 const client = new discord.Client();

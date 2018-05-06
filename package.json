@@ -1,8 +1,8 @@
 {
-  "name": "discord-sad-violin-bot",
+  "name": "discord-amoeba-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "amoeba.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,6 @@
   "dependencies": {
     "discord.js": "^11.1.0",
     "ffmpeg-binaries": "^3.2.2-3",
-    "moment": "^2.18.1",
     "opusscript": "0.0.3"
   }
 }

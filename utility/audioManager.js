@@ -1,5 +1,7 @@
 'use strict';
 
+const testAudio = "./begone-thot.mp3";
+
 function playAudio(message, audioPath, audioOptions) {
     message.member.voiceChannel.join()
         .then(connection => {
@@ -7,7 +9,7 @@ function playAudio(message, audioPath, audioOptions) {
             console.log("Joined the channel!");
 
             // play the audio file
-            const dispatcher = connection.playFile(audioPath, audioOptions);
+            const dispatcher = connection.playFile(testAudio, audioOptions);
 
             console.log("Started playing audio: " + audioPath);
 

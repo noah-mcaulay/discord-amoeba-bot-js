@@ -1,3 +1,5 @@
+'use strict';
+
 const tokenFile = require("./token.js");
 
 const discord = require('discord.js');

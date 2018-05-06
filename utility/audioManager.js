@@ -4,11 +4,16 @@ function playAudio(message, audioPath, audioOptions) {
     message.member.voiceChannel.join()
         .then(connection => {
 
+            console.log("Joined the channel!");
+
             // play the audio file
             const dispatcher = connection.playFile(audioPath, audioOptions);
 
+            console.log("Started playing audio!");
+
             // disconnect from the voice channel when the audio is over
             dispatcher.on("end", () => {
+                console.log("Audio is over.");
                 message.member.voiceChannel.leave();
             });
         })
